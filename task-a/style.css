@@ -1,0 +1,40 @@
+/* Reset minimal */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+html, body { height: 100%; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color: #222; }
+body { display: flex; flex-direction: column; min-height: 100vh; line-height: 1.5; padding: 1rem; background: #f7f7fb; }
+
+
+.site-header { text-align: center; padding: 2rem 1rem; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(20,20,40,0.05); }
+.site-header h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+.tagline { color: #555; font-size: 0.95rem; }
+
+
+.main-nav { margin: 1rem auto; }
+.main-nav ul { list-style: none; display: flex; gap: 1rem; justify-content: center; }
+.main-nav a { text-decoration: none; padding: 0.5rem 0.75rem; border-radius: 8px; display: inline-block; }
+.main-nav a:hover { background: rgba(0,0,0,0.03); }
+
+
+main { flex: 1 0 auto; max-width: 900px; margin: 1.25rem auto; }
+section { background: white; padding: 1rem 1.25rem; border-radius: 10px; box-shadow: 0 1px 6px rgba(20,20,40,0.03); margin-bottom: 1rem; }
+section h2 { margin-bottom: 0.5rem; font-size: 1.15rem; }
+
+
+.site-footer { text-align: center; padding: 0.75rem 0; color: #666; font-size: 0.9rem; }
+
+
+/* Responsive */
+@media (min-width: 640px) {
+.site-header h1 { font-size: 2rem; }
+.main-nav ul { gap: 1.5rem; }
+}
+
+
+@media (min-width: 900px) {
+body { padding: 2rem; }
+main { display: grid; grid-template-columns: 1fr 320px; gap: 1rem; align-items: start; }
+#about, #features { grid-column: 1 / 2; }
+#contact { grid-column: 2 / 3; }
+}
