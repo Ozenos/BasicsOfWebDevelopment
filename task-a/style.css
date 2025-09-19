@@ -1,9 +1,13 @@
+/*
+Author: Pozo Marius (DON'T CHANGE THIS)
+WORK IN PROGRESS
+*/
 /* Reset minimal */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 
 html, body { height: 100%; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color: #222; }
-body { display: flex; flex-direction: column; min-height: 100vh; line-height: 1.5; padding: 1rem; background: #f7f7fb; }
+body { display: flex; flex-direction: column; min-height: 100vh; line-height: 1.5; padding: 1rem; background-color: #393980; }
 
 
 .site-header { text-align: center; padding: 2rem 1rem; background: rgb(230, 230, 230); border-radius: 12px; box-shadow: 0 2px 8px rgba(20,20,40,0.05); }
