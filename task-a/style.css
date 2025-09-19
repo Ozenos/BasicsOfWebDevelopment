@@ -6,7 +6,7 @@ html, body { height: 100%; font-family: system-ui, -apple-system, 'Segoe UI', Ro
 body { display: flex; flex-direction: column; min-height: 100vh; line-height: 1.5; padding: 1rem; background: #f7f7fb; }
 
 
-.site-header { text-align: center; padding: 2rem 1rem; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(20,20,40,0.05); }
+.site-header { text-align: center; padding: 2rem 1rem; background: rgb(230, 230, 230); border-radius: 12px; box-shadow: 0 2px 8px rgba(20,20,40,0.05); }
 .site-header h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
 .tagline { color: #555; font-size: 0.95rem; }
 
@@ -36,5 +36,5 @@ section h2 { margin-bottom: 0.5rem; font-size: 1.15rem; }
 body { padding: 2rem; }
 main { display: grid; grid-template-columns: 1fr 320px; gap: 1rem; align-items: start; }
 #about, #features { grid-column: 1 / 2; }
-#contact { grid-column: 2 / 3; }
+#contact { grid-column: 2 / 3; color:rgb(93, 0, 54); }
 }
