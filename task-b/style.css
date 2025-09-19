@@ -17,7 +17,7 @@ body { display: flex; flex-direction: column; min-height: 100vh; line-height: 1.
 
 .main-nav { margin: 1rem auto; }
 .main-nav ul { list-style: none; display: flex; gap: 1rem; justify-content: center; }
-.main-nav a { text-decoration: none; padding: 0.5rem 0.75rem; border-radius: 8px; display: inline-block; }
+.main-nav a { text-decoration: none; padding: 0.5rem 0.75rem; border-radius: 8px; display: inline-block;}
 .main-nav a:hover { background: rgba(0,0,0,0.03); }
 
 
@@ -43,7 +43,14 @@ main { display: grid; grid-template-columns: 1fr 320px; gap: 1rem; align-items: 
 #mainbox { grid-column: 1 / 3; text-align: justify; }
 #about, #features { grid-column: 1 / 2; text-align: justify; }
 #contact { grid-column: 2 / 3; }
-#exobloc { grid-column: 1 / 3; text-align: justify; color:#222}
+#exobloc { grid-column: 1 / 3; text-align: justify; color:#515151}
+}
+
+a {
+     font-weight: bold;
+}
+li {
+    color:#0a0000;
 }
 
 /* Spacing wasn't very good without this */
