@@ -51,14 +51,14 @@ main { display: grid; grid-template-columns: 1fr 320px; gap: 1rem; align-items: 
 }
 
 .container img {
-  width: 500px; /* Adjust as needed */
+  max-width: 500px; /* Adjust as needed */
   justify-content: center; /* Horizontal centering */
   height: auto;
 }
 
 .text {
   margin-left: 20px; /* Space between image and text */
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-size: 20px;
   text-align: center;
   justify-content: center;
