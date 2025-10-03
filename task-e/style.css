@@ -59,13 +59,7 @@ h1, h2, h3 {
   font-size: 0.95rem;
 }
 
-@media (min-width: 640px) {
-  .header h1 {
-    font-size: 2rem;
-  }
-}
-
-/* Main summary line */
+/* nav line */
 
 .main-nav {
   margin: 1rem auto;
@@ -156,8 +150,8 @@ section ul li {
     text-align: justify;
   }
 
-  .highlight {
-    grid-column: 1 / 2;
+  #highlight {
+    grid-column: 2 / 3;
   }
 
   #special-message {
