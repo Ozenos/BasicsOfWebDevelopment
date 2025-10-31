@@ -98,16 +98,28 @@ body {
   font-size: 1.1rem;
 }
 
+.input-name {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  margin-top: 0.6rem;
+}
+
+.error-message {
+  font-size: 0.9rem;
+  margin: 0.2rem 0.6rem 0rem;
+  color: #fd4444;
+}
+
 .form-row {
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  margin: 0.5rem 0;
+  margin: -0.1rem 0;
 }
 
 .form-row input[type="text"],
 .form-row input[type="email"] {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   padding: 0.45rem 0.6rem;
   border: 1px solid var(--border);
   border-radius: 6px;

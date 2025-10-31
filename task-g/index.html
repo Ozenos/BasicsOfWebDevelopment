@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
   <title>Weekly Timetable</title>
   <link rel="stylesheet" href="./style.css">
   <script src="./index.js"></script>
@@ -30,30 +33,36 @@
       <section class="controls" aria-label="Add course row">
         <h2 class="controls-title">Add Information</h2>
 
-        <form id="addInfoForm">
+        <form id="addInfoForm" novalidate>
+          <p class="input-name">Full name</p>
           <div class="form-row">
-            <label for="fullName">Full name</label>
             <input id="fullName" name="fullName" type="text" required="">
           </div>
+          <span id="name-error" class="error-message"></span>
+          
 
+          <p class="input-name">Email</p>
           <div class="form-row">
-            <label for="email">Email</label>
             <input id="email" name="email" type="email" required="" placeholder="example@email.com">
           </div>
+          <span id="email-error" class="error-message"></span>
 
+          <p class="input-name">Phone</p>
           <div class="form-row">
-            <label for="tel">Phone</label>
             <input id="tel" name="tel" type="tel" placeholder="06 12 34 56 78">
           </div>
+          <span id="phone-error" class="error-message"></span>
 
+          <p class="input-name">Date of birth</p>
           <div class="form-row">
-            <label for="DoB">Date of birth</label>
-            <input id="DoB" name="DoB" type="date" required="">
+            <input id="dob" name="DoB" type="date" required="">
           </div>
+          <span id="dob-error" class="error-message"></span>
 
+          <hr style="border: none; border-bottom: 1px solid rgba(0,0,0,0.1);">
           <div class="form-row">
             <input id="terms" name="terms" type="checkbox" required="">
-            <label for="terms">I accept terms and conditions</label>
+            <label for="terms" style="margin: 0rem 0rem 0.5rem">I accept terms and conditions</label>
           </div>
 
           <div class="form-row">
@@ -74,6 +83,7 @@
             <th>Email</th>
             <th>Phone</th>
             <th>Date of Birth</th>
+            <th>Terms</th>
           </tr>
         </thead>
         <tbody>
@@ -84,4 +94,6 @@
 
 
 
-</body></html>
+</body>
+
+</html>
