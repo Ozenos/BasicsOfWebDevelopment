@@ -3,9 +3,6 @@
 // Date: 2025-10-24
 
 document.addEventListener("DOMContentLoaded", () => {
-  const CHECK = '✅';
-  const CROSS = '❌';
-
   const form = document.getElementById("addInfoForm");
   const table = document.getElementById("timetable").querySelector("tbody");
 
@@ -19,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailError = document.getElementById('email-error');
   const phoneError = document.getElementById('phone-error');
   const DoBError = document.getElementById('dob-error');
+  const termsError = document.getElementById("terms-error");
 
   // Name input check
   function validateName(submit) {
@@ -90,11 +88,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   DoBInput.addEventListener('blur', validateDate);
 
+  function validateTerms() {
+    if (!termsInput.checked) {
+      termsError.textContent = "You must accept the terms and conditions.";
+      return false;
+    }
+    termsError.textContent = "";
+    return true;
+  }
+  termsInput.addEventListener("change", validateTerms);
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     validateDate();
     validateEmail(1);
     validateName(1);
+    validateTerms();
 
     // Check for any active error messages
     const errors = document.querySelectorAll('.error-message');
@@ -124,26 +133,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const row = document.createElement("tr");
 
     const timeCell = document.createElement("td");
+    timeCell.className = "text-left px-3 py-2 border-b border-[#d0d7e2] text-left align-middle";
     timeCell.textContent = getCustomTimestamp();
     row.appendChild(timeCell);
 
     const nameCell = document.createElement("td");
+    nameCell.className = "text-center px-3 py-2 border-b border-[#d0d7e2] text-left align-middle";
     nameCell.textContent = fullName;
     row.appendChild(nameCell);
 
     const emailCell = document.createElement("td");
+    emailCell.className = "text-center px-3 py-2 border-b border-[#d0d7e2] text-left align-middle";
     emailCell.textContent = email;
     row.appendChild(emailCell);
 
     const phoneCell = document.createElement("td");
+    phoneCell.className = "text-center px-3 py-2 border-b border-[#d0d7e2] text-left align-middle";
     phoneCell.textContent = validPhone;
     row.appendChild(phoneCell);
 
     const DoBCell = document.createElement("td");
+    DoBCell.className = "text-center px-3 py-2 border-b border-[#d0d7e2] text-left align-middle";
     DoBCell.textContent = DoBInput.value;
     row.appendChild(DoBCell);
 
     const TermsCell = document.createElement("td");
+    TermsCell.className = "text-center px-3 py-2 border-b border-[#d0d7e2] text-left align-middle";
     TermsCell.textContent = termsInput.value;
     row.appendChild(TermsCell);
 
